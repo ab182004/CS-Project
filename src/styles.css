@@ -1,1 +1,151 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    font-family: 'Assistant', sans-serif;
+    margin: 0px !important;
+    padding: 0px !important;
+  }
+
+.btn-wrapper {
+    /* flexbox */
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  
+.btn {
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #cecece;
+    padding: .35rem 1rem .25rem 1rem;
+    font-size: 1rem;
+  }
+  
+.btn:hover {
+    background-color: #ecf2fd;
+  }
+  
+.btn:active {
+    background-color: #d1e0fe;
+  }
+  
+.btn:focus {
+    outline: none;
+    border: 2px solid rgb(20, 145, 204);
+  }
+  
+.btn-primary {
+    align-items: center;
+    background-color: rgb(89, 158, 226);
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-family: Inter,sans-serif;
+    font-size: 16px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    width: 100%;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .btn-primary:after {
+    background-color: #111;
+    border-radius: 8px;
+    content: "";
+    display: block;
+    height: 48px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    transform: translate(8px, 8px);
+    transition: transform .2s ease-out;
+    z-index: -1;
+  }
+  
+  .btn-primary:hover:after {
+    transform: translate(0, 0);
+  }
+  
+  .btn-primary:active {
+    background-color: #ffdeda;
+    outline: 0;
+  }
+  
+  .btn-primary:hover {
+    outline: 0;
+  }
+  
+  @media (min-width: 768px) {
+    .btn-primary {
+      padding: 0 40px;
+    }
+  }
+
+  .btn-save1 {
+    align-items: center;
+    background-color: #ecb308;
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-family: Inter,sans-serif;
+    font-size: 16px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    width: 100%;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .btn-save1:after {
+    background-color: #111;
+    border-radius: 8px;
+    content: "";
+    display: block;
+    height: 48px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    transform: translate(8px, 8px);
+    transition: transform .2s ease-out;
+    z-index: -1;
+  }
+  
+  .btn-save1:hover:after {
+    transform: translate(0, 0);
+  }
+  
+  .btn-save1:active {
+    background-color: #ffdeda;
+    outline: 0;
+  }
+  
+  .btn-save1:hover {
+    outline: 0;
+  }
+  
+  @media (min-width: 768px) {
+    .btn-save1 {
+      padding: 0 40px;
+    }
+  }

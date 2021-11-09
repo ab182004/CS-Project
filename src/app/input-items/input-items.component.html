@@ -1,0 +1,75 @@
+<head>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300&display=swap');
+    </style>
+  </head>
+
+<div class="topnav">
+    <a routerLink="/dashboard">Dashboard</a>
+    <a class="active" routerLink="/input-items">Input Items</a>
+    <a routerLink="/view-items">View Stock</a>
+    <a routerLink="/settings">System Settings</a>
+</div>
+  <div class="main">
+    <h1>Input New Items</h1>
+    
+    <!-- Description Input-->
+    <input
+      #newItemDescription
+      placeholder="add item description"
+      class="lg-text-input"
+      id="addItemInput"
+    />
+
+    <!-- Quantity Input-->
+    <input
+      #newItemQuantity
+      placeholder="add item quantity"
+      class="lg-text-input"
+      id="addItemInput"
+    />
+
+<!-- <button class="btn-primary" (click)="addItem(newItem.value)">Add</button>
+ -->
+
+  <!-- Buttons that show all, still to do, or done items on click -->
+  <div class="btn-wrapper">
+    <button
+      class="btn btn-menu"
+      [class.active]="filter == 'all'"
+      (click)="filter = 'all'">
+      All
+    </button>
+
+    <button
+      class="btn btn-menu"
+      [class.active]="filter == 'active'"
+      (click)="filter = 'active'">
+      To Do
+    </button>
+
+    <button
+      class="btn btn-menu"
+      [class.active]="filter == 'done'"
+      (click)="filter = 'done'">
+      Done
+    </button>
+  </div>
+
+  <!-- <h2>{{items.length}} item(s)</h2>
+        <ul>... -->
+
+<button class="btn-primary" (click)="addItem(newItemDescription.value, newItemQuantity.value)">Add</button><br>
+<button class="btn-save1" (click)="exportAsUserText(items)">Export as txt</button><br>
+<button class="btn-save1" (click)="SaveDemo(items)">Save</button>
+  
+  <h2>{{items.length}} <span *ngIf="items.length === 1; else elseBlock">item</span>
+  <ng-template #elseBlock>items</ng-template></h2>
+  
+  <ul>
+    <li *ngFor="let item of items">
+      <app-item (remove)="remove(item)" [item]="item"></app-item>
+    </li>
+  </ul>
+  
+</div>
