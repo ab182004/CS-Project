@@ -30,13 +30,17 @@ label {
 .lg-text-input {
     width: 100%;
     padding: 1rem;
-    border: 1px solid #000;
+    border: 0.5px solid #000;
     display: block;
     box-sizing: border-box;
     font-size: 1rem;
     font-family: 'Assistant', sans-serif;
     font-weight: 600;
   }
+
+.lg-text-input:hover {
+  background: #d1e0fe;
+}
   
 .btn-wrapper {
     margin-bottom: 2rem;
@@ -46,10 +50,15 @@ label {
     flex-basis: 32%;
     font-family: 'Assistant', sans-serif;
   }
+
+.btn-menu:hover {
+  border: none;
+}
   
 .active {
     background-color: rgb(9, 158, 9);
     color: white;
+    border: none;
   }
   
 ul {
@@ -74,6 +83,7 @@ ul li {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  margin: auto;
 }
 
 /* Change the color of links on hover */

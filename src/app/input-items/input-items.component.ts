@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Item } from './item';
 import itemStockJSON from '../itemStockJSON.json'; // This import style requires "esModuleInterop", see "side notes"
-import * as FileSaver from 'file-saver';
+// import * as FileSaver from 'file-saver';
 
 @Component({
   selector: 'app-input-items',
@@ -86,12 +86,12 @@ export class InputItemsComponent implements OnInit {
     this.allItems.splice(this.allItems.indexOf(item), 1);
   }
   
-  SaveDemo(allItems: Array<Item>) {
+  /* SaveDemo(allItems: Array<Item>) {
     let blob = new Blob([JSON.stringify(allItems)], {
         type: "text/plain"
       });
     FileSaver.saveAs(blob, "itemStockJSON.json");    
-  }
+  } */
    
 }
 

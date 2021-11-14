@@ -36,11 +36,11 @@ body {
   
 .btn-primary {
     align-items: center;
-    background-color: rgb(89, 158, 226);
+    background-color: #afb8b3;
     border: 2px solid #111;
     border-radius: 8px;
     box-sizing: border-box;
-    color: #fff;
+    color: #000;
     cursor: pointer;
     display: flex;
     font-family: Inter,sans-serif;
@@ -94,11 +94,11 @@ body {
 
   .btn-save1 {
     align-items: center;
-    background-color: #ecb308;
+    background-color: #ffcc00;
     border: 2px solid #111;
     border-radius: 8px;
     box-sizing: border-box;
-    color: #fff;
+    color: #003366;
     cursor: pointer;
     display: flex;
     font-family: Inter,sans-serif;
@@ -149,3 +149,19 @@ body {
       padding: 0 40px;
     }
   }
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(20, 145, 204);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(6, 87, 124);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(7, 58, 82);
+}

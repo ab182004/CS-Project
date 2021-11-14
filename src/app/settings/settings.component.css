@@ -27,6 +27,12 @@
     color: white;
   }
 
-  body {
+  .settings1 {
       padding: 5px 30% 20px 10%;
+  }
+
+  .settingsImage {
+    padding-top: 20px;
+    height: 50%;
+    width: 50%;
   }

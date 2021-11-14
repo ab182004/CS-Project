@@ -7,7 +7,6 @@
 <div class="topnav">
     <a routerLink="/dashboard">Dashboard</a>
     <a class="active" routerLink="/input-items">Input Items</a>
-    <a routerLink="/view-items">View Stock</a>
     <a routerLink="/settings">System Settings</a>
 </div>
   <div class="main">
@@ -16,7 +15,7 @@
     <!-- Description Input-->
     <input
       #newItemDescription
-      placeholder="add item description"
+      placeholder="Add Item Description"
       class="lg-text-input"
       id="addItemInput"
     />
@@ -24,7 +23,7 @@
     <!-- Quantity Input-->
     <input
       #newItemQuantity
-      placeholder="add item quantity"
+      placeholder="Add Item Quantity"
       class="lg-text-input"
       id="addItemInput"
     />
@@ -37,21 +36,24 @@
     <button
       class="btn btn-menu"
       [class.active]="filter == 'all'"
-      (click)="filter = 'all'">
+      (click)="filter = 'all'"
+      title="Displays all existing tasks">
       All
     </button>
 
     <button
       class="btn btn-menu"
       [class.active]="filter == 'active'"
-      (click)="filter = 'active'">
+      (click)="filter = 'active'"
+      title="Displays all undone tasks">
       To Do
     </button>
 
     <button
       class="btn btn-menu"
       [class.active]="filter == 'done'"
-      (click)="filter = 'done'">
+      (click)="filter = 'done'"
+      title="Displays all completed tasks">
       Done
     </button>
   </div>
@@ -59,9 +61,9 @@
   <!-- <h2>{{items.length}} item(s)</h2>
         <ul>... -->
 
-<button class="btn-primary" (click)="addItem(newItemDescription.value, newItemQuantity.value)">Add</button><br>
-<button class="btn-save1" (click)="exportAsUserText(items)">Export as txt</button><br>
-<button class="btn-save1" (click)="SaveDemo(items)">Save</button>
+<button class="btn-primary" (click)="addItem(newItemDescription.value, newItemQuantity.value)" title="Add the new item">Add</button><br>
+<button class="btn-save1" (click)="exportAsUserText(items)" title="Export all existing stock as a .txt file">Export as txt</button><br>
+<button class="btn-save1" (click)="export2JSON(items)" title="Export all existing stock as a .JSON file">Export as JSON</button><br>
   
   <h2>{{items.length}} <span *ngIf="items.length === 1; else elseBlock">item</span>
   <ng-template #elseBlock>items</ng-template></h2>
