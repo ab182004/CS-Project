@@ -9,6 +9,7 @@ import { ViewItemsComponent } from './view-items/view-items.component';
 import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
 import { SettingsComponent } from './settings/settings.component';
 import { ItemComponent } from './input-items/item/item.component';
+import { OpeningComponent } from './opening/opening.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ItemComponent } from './input-items/item/item.component';
     ViewItemsComponent,
     NoPageFoundComponent,
     SettingsComponent,
-    ItemComponent
+    ItemComponent,
+    OpeningComponent
   ],
   imports: [
     BrowserModule,

@@ -36,8 +36,8 @@
 }
 
 /* padding: top right bottom left */
-.content1 {
-    background-color: #195f58;
+.content2 {
+    background: #333333;
     color: #FFF;
     font-family: 'Assistant', sans-serif;
     padding: 5px 30% 20px 10%;
@@ -45,8 +45,8 @@
 }
 
 /* Links */
-.content2 {
-    background-color: #FFF;
+.content1 {
+    background: var(--bg-color);
     color: black;
     font-family: 'Assistant', sans-serif;
     padding: 5px 30% 20px 10%;

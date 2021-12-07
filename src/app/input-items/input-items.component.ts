@@ -73,6 +73,7 @@ export class InputItemsComponent implements OnInit {
   }
   
   // add item
+  /* 
   addItem(description: string, quantity: string) {
     this.allItems.unshift({
       description,
@@ -80,18 +81,34 @@ export class InputItemsComponent implements OnInit {
       done: false
     });
   }
+  */
+
+  addItem(description: string, quantity: string) {
+    const data = { "name": description, "quantity": quantity };
+    console.log("This works" + description + quantity)
+    //POST request with body equal on data in JSON format
+    fetch('http://localhost:5000/items/create', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+    .then((response) => response.json())
+    //Then with the data from the response in JSON...
+    .then((data) => {
+      console.log('Success:', data);
+    })
+    //Then with the error genereted...
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+
+  }
 
   // removes item
   remove(item: Item) {
     this.allItems.splice(this.allItems.indexOf(item), 1);
   }
-  
-  /* SaveDemo(allItems: Array<Item>) {
-    let blob = new Blob([JSON.stringify(allItems)], {
-        type: "text/plain"
-      });
-    FileSaver.saveAs(blob, "itemStockJSON.json");    
-  } */
-   
 }
 
