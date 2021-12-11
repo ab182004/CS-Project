@@ -29,10 +29,52 @@ export class ItemComponent {
   }
 
   saveItem(description: string, quantity: string) {
-    if (!description) return;
+    /* if (!description) return;
     this.editable = false;
     this.item.description = description;
     if (!quantity) return;
-    this.item.quantity = Number(quantity);
+    this.item.quantity = Number(quantity); */
+
+    const data = { "description": description, "quantity": quantity };
+    console.log("Updated " + description + " to quantity: " + quantity);
+    async function sendUpdateData(req_data: any, callback:() => void) {
+      try {
+          const response = await fetch('http://localhost:5000/items/update', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              },
+            body: JSON.stringify(req_data)
+          });
+        console.log("Sent Update request. Calling callback function");
+        callback();
+      } catch (err) {
+        console.log("Error: " + err)
+      }
+    };
+    sendUpdateData(data, () => {});
+    window.location.reload();
+  }
+
+  deleteItem(description: string) {
+    const data = { "description": description };
+    console.log("Deleted " + description + ".");
+    async function sendDeleteData(req_data: any, callback:() => void) {
+      try {
+          const response = await fetch('http://localhost:5000/items/delete/:id', {
+            method: 'DELETE',
+            headers: {
+              'Content-Type': 'application/json',
+              },
+            body: JSON.stringify(req_data)
+          });
+        console.log("Sent Delete request. Calling callback function");
+        callback();
+      } catch (err) {
+        console.log("Error: " + err)
+      }
+    };
+    sendDeleteData(data, () => {});
+    this.remove.emit();
   }
 }

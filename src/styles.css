@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
   --bg-color: #eeebe2;
-  --typewriterSpeed: 6s;
+  --typewriterSpeed: 3s;
   --typewriterCharacters: 20;
 }
 
@@ -141,11 +141,11 @@ body {
     cursor: pointer;
     display: flex;
     font-family: Inter,sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     height: 48px;
     justify-content: center;
     line-height: 24px;
-    width: 100%;
+    width: 25%;
     padding: 0 25px;
     position: relative;
     text-align: center;
@@ -199,11 +199,11 @@ body {
     cursor: pointer;
     display: flex;
     font-family: Inter,sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     height: 48px;
     justify-content: center;
     line-height: 24px;
-    width: 100%;
+    width: 40%;
     padding: 0 25px;
     position: relative;
     text-align: center;

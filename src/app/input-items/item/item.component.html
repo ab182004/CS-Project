@@ -5,7 +5,7 @@
   
     <div class="btn-wrapper" *ngIf="!editable">
       <button class="btn" (click)="editable = !editable" title="Edit Item Properties">Edit</button>
-      <button class="btn btn-warn" (click)="remove.emit()" title="Delete Item">Delete</button>
+      <button class="btn btn-warn" (click)="deleteItem(item.description)" title="Delete Item">Delete</button>
     </div>
   
     <!-- This section shows only if user clicks Edit button -->
@@ -19,4 +19,3 @@
     </div>
   
 </div>
-  
